@@ -1,19 +1,13 @@
 import styled from "styled-components";
 
-const RollDice = (props) => {
-  const { diceImage, setDiceImage } = props;
-
-  const handleClick = () => {
-    const randomNumber = Math.floor(Math.random() * 6) + 1;
-    setDiceImage(`dice_${randomNumber}.png`);
-  };
+const RollDice = ({ currentDice, rollDice }) => {
   return (
     <DiceContainer>
       <div className="dice">
         <img
-          onClick={handleClick}
-          src={`images/Dice/${diceImage}`}
-          alt={`Dice with ${diceImage} number`}
+          onClick={rollDice}
+          src={`images/Dice/dice_${currentDice}.png`}
+          alt={`Dice with ${currentDice} number`}
         />
       </div>
       <p>Click on Dice to roll</p>
