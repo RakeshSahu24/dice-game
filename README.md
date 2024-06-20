@@ -12,7 +12,6 @@ Currently, two official plugins are available:
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -30,9 +29,51 @@ To use this template, you will need [Node.js](https://nodejs.org/en/) and [npm](
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name
-   cd your-repo-name
+   git clone https://github.com/RakeshSahu24/dice-game.git
    ```
 
 2. **Install dependencies:**
    `npm install`
+
+##  Usage:  
+
+   `npm run dev` this will start the Vite development server with HMR enabled.
+
+To build the project for production, run: 
+ `npm run build`
+
+To preview the production build locally, run: `npm run preview`
+
+## Contributing
+
+We welcome contributions! If you have any ideas, improvements, or bug fixes, please follow these steps:
+
+1. **Fork the repository** on GitHub.
+2. **Create a new branch:** 
+   ```bash 
+   git checkout -b my-feature
+   ```
+
+Make your changes and ensure the code follows the existing style and passes all tests.
+
+3. **Commit your changes:** 
+   ```bash
+   git commit -m 'Add my feature'
+   ```
+   
+
+4. **Push to the branch:** 
+   ```baah
+   git push origin my-feature
+   ```
+5. **Create a pull request on GitHub:**
+Please make sure your pull request adheres to the following guidelines:
+
+- Describe the changes in detail.
+- Ensure the code is well-documented and follows the project's coding style.
+- Include any relevant issue numbers if applicable.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
