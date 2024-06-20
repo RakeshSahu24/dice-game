@@ -1,27 +1,34 @@
 import NumberSelector from "./NumberSelector";
+import RollDice from "./RollDice";
 import TotalScore from "./TotalScore";
+import styled from "styled-components";
+import { useState } from "react";
 
 const GamePlay = () => {
+  const [selectedNumber, setSelectedNumber] = useState();
+  const [diceImage, setDiceImage] = useState("dice_1.png");
+
   return (
-    <main>
-      <TotalScore />
-      <NumberSelector />
-    </main>
+    <MainContainer>
+      <div className="top_section">
+        <TotalScore />
+        <NumberSelector
+          selectedNumber={selectedNumber}
+          setSelectedNumber={setSelectedNumber}
+        />
+      </div>
+      <RollDice diceImage={diceImage} setDiceImage={setDiceImage} />
+    </MainContainer>
   );
 };
-// const Container = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 10px;
-//   .box {
-//     width: 72px;
-//     height: 72px;
-//     background: #ffffff;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     border: 1px solid #000;
-//     box-sizing: border-box;
-//   }
-// `;
+
+const MainContainer = styled.main`
+  padding-top: 70px;
+  .top_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+  }
+`;
+
 export default GamePlay;
